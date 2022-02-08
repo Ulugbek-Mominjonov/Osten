@@ -40,7 +40,7 @@ async def stop_state(callback: types.CallbackQuery, state: FSMContext):
 @dp.callback_query_handler(text='next', state=Form3.qavat)
 async def set_date(callback: types.CallbackQuery, state: FSMContext):
     async with state.proxy() as data:
-        await callback.message.answer(f"{data['state']} qavat ma'lumotlarini kiritsh:\n\nЛевый...")
+        await callback.message.answer(f"{data['state']} qavat ma'lumotlarini kiritsh:\n\nChap A...")
 
 
 @dp.message_handler(state=Form3.qavat)

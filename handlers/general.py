@@ -17,7 +17,7 @@ async def send_welcome(message: types.Message):
 @dp.message_handler()
 async def startState(message: types.Message, state: FSMContext):
     if message.text == "Shahta o'lchamlarini olish":
-        await message.reply("Siz Shahta o'lchamlarini olish botni tanladingiz.\nO'lchamlarni olish tugmani bosing",
+        await message.reply("Siz Shahta o'lchamlarini olish botni 1-variantini tanladingiz.\nO'lchamlarni olish tugmani bosing",
                             reply_markup=btn.osten)
     elif message.text == "O'lchamlarni olish":
         await Form.loyiha_nomi.set()
@@ -29,8 +29,8 @@ async def startState(message: types.Message, state: FSMContext):
     elif message.text == "Ma'lumotlarni kiritish":
         await Form2.loyiha_nomi.set()
         await message.reply("Лойиҳа номи:", reply_markup=ReplyKeyboardRemove())
-    elif message.text == "Birnima":
-        await message.reply("Siz Birnima o'lchamlarini olish botni tanladingiz.\nMa'lumotni kiritish tugmani bosing",
+    elif message.text == "Shahta o'lchamlarini olish 2-variant":
+        await message.reply("Siz Shahta o'lchamlarini olish botni 2-variantini tanladingiz.\nMa'lumotni kiritish tugmani bosing",
                             reply_markup=btn.osten3)
     elif message.text == "O'lchamlarni kiritish":
         await Form3.loyiha_nomi.set()

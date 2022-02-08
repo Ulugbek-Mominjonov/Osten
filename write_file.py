@@ -518,7 +518,10 @@ def write_excel_osten3(data):
         vertical='center',
         wrapText=True)
     ws2.cell(row=5, column=17).font = Font(bold=True)
-    ws2.cell(row=5, column=17).border = thin_border
+    ws2.cell(row=5, column=17).border = Border(left=Side(style='double'),
+                     right=Side(style='double'),
+                     top=Side(style='double'),
+                     bottom=Side(style='double'))
     ws2.merge_cells('Q5:Z5')
 
     ws2.cell(row=6, column=17, value=data["chap_yon devor"]).alignment = Alignment(
@@ -527,7 +530,10 @@ def write_excel_osten3(data):
         textRotation=90,
         wrapText=True)
     ws2.cell(row=6, column=17).font = Font(bold=True)
-    ws2.cell(row=6, column=17).border = thin_border
+    ws2.cell(row=6, column=17).border = Border(left=Side(style='double'),
+                     right=Side(style='double'),
+                     top=Side(style='double'),
+                     bottom=Side(style='double'))
     ws2.merge_cells('Q6:Q22')
 
     ws2.cell(row=6, column=26, value=data["ong_yon devor"]).alignment = Alignment(
@@ -536,7 +542,10 @@ def write_excel_osten3(data):
         textRotation=90,
         wrapText=True)
     ws2.cell(row=6, column=26).font = Font(bold=True)
-    ws2.cell(row=6, column=26).border = thin_border
+    ws2.cell(row=6, column=26).border = Border(left=Side(style='double'),
+                     right=Side(style='double'),
+                     top=Side(style='double'),
+                     bottom=Side(style='double'))
     ws2.merge_cells('Z6:Z22')
 
     ws2.cell(row=21, column=18, value=data["old_chap devor"]).alignment = Alignment(
@@ -544,7 +553,10 @@ def write_excel_osten3(data):
         vertical='center',
         wrapText=True)
     ws2.cell(row=21, column=18).font = Font(bold=True)
-    ws2.cell(row=21, column=18).border = thin_border
+    ws2.cell(row=21, column=18).border = Border(left=Side(style='double'),
+                     right=Side(style='double'),
+                     top=Side(style='double'),
+                     bottom=Side(style='double'))
     ws2.merge_cells('R21:T22')
 
     ws2.cell(row=21, column=23, value=data["old_ong devor"]).alignment = Alignment(
@@ -552,7 +564,10 @@ def write_excel_osten3(data):
         vertical='center',
         wrapText=True)
     ws2.cell(row=21, column=23).font = Font(bold=True)
-    ws2.cell(row=21, column=23).border = thin_border
+    ws2.cell(row=21, column=23).border = Border(left=Side(style='double'),
+                     right=Side(style='double'),
+                     top=Side(style='double'),
+                     bottom=Side(style='double'))
     ws2.merge_cells('W21:Y22')
 
     ws2.cell(row=6, column=19, value=f"Chap orqa C").alignment = Alignment(
@@ -671,13 +686,13 @@ def write_excel_osten3(data):
         wrapText=True)
     ws2.cell(row=31, column=26).border = thin_border
 
-    ws2.cell(row=34, column=16, value=data['Eslatma']).alignment = Alignment(
+    ws2.cell(row=34, column=16, value=f"Eslatma: {data['Eslatma']}").alignment = Alignment(
         horizontal='left',
         vertical='center',
         wrapText=True)
     ws2.cell(row=34, column=16).font = Font(bold=True)
     ws2.cell(row=34, column=16).border = thin_border
-    ws2.merge_cells('P34:X37')
+    ws2.merge_cells('P34:Z37')
 
     ws2.cell(row=39, column=16, value=f'Muhandis').alignment = Alignment(
         horizontal='center',
