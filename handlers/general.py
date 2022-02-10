@@ -16,7 +16,7 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler()
 async def startState(message: types.Message, state: FSMContext):
-    if message.text == "Shahta o'lchamlarini olish":
+    if message.text == "Shahta o'lchamlarini olish 1-variant":
         await message.reply("Siz Shahta o'lchamlarini olish botni 1-variantini tanladingiz.\nO'lchamlarni olish tugmani bosing",
                             reply_markup=btn.osten)
     elif message.text == "O'lchamlarni olish":

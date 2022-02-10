@@ -23,6 +23,12 @@ async def process_loyiha(message: types.Message, state: FSMContext):
         for i in range(1, 21):
             data[f"qavat_{i}"] = {}
     await Form3.next()
+    with open('rasm/shaxta.png', 'rb') as ph:
+        await message.answer_photo(
+            photo=ph,
+            caption="<b>Rasm asosida o'lchamlarni kiriting</b>",
+            parse_mode=types.ParseMode.HTML
+        )
     await message.answer("1-etaj malumotlarini kiriting:\nChap A...")
 
 
